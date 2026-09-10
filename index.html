@@ -386,6 +386,60 @@ var LOC = {
   cnx:{name:"צ׳יאנג מאי", c:"var(--cnx)"},
   pai:{name:"פאי", c:"var(--pai)"},
   usm:{name:"קוסמוי", c:"var(--usm)"}
+etch('./data.json')
+  .then(response => response.json())
+  .then(data => {
+    console.log("נתוני הטיול נטענו בהצלחה:", data);
+    
+    // 1. עדכון כותרת הטיול
+    const titleElement = document.getElementById('trip-title');
+    if (titleElement) titleElement.innerText = data.title;
+    
+    // 2. בניה דינמית של כרטיסיות הלו"ז היומי (Itinerary)
+    const itineraryContainer = document.getElementById('itinerary-container');
+    if (itineraryContainer) {
+      itineraryContainer.innerHTML = ''; // ניקוי תוכן ישן
+      
+      data.itinerary.forEach(day => {
+        const card = document.createElement('div');
+        card.className = 'day-card';
+        card.innerHTML = `
+          <div class="card-header">
+            <h3>${day.day} | ${day.date} - ${day.destination}</h3>
+            <span class="status-badge">${day.status}</span>
+          </div>
+          <p><strong>🏨 לינה:</strong> ${day.hotel}</p>
+          <p><strong>📍 פעילויות:</strong> ${day.activities}</p>
+          <p><strong>🚌 טיסות ולוגיסטיקה:</strong> ${day.logistics}</p>
+          <p class="notes"><strong>💬 הערות וטיפים:</strong> ${day.notes}</p>
+        `;
+        itineraryContainer.appendChild(card);
+      });
+    }
+
+    // 3. בניה דינמית של כרטיסיות הושבה וטיסות (Passengers & Seats)
+    const seatsContainer = document.getElementById('seats-container');
+    if (seatsContainer && data.passengers_seats) {
+      seatsContainer.innerHTML = '';
+      
+      data.passengers_seats.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'seat-card';
+        card.innerHTML = `
+          <h4>👤 ${p.name} (${p.type})</h4>
+          <ul>
+            <li><b>מושב PG216 (19/09):</b> ${p.seat_pg216}</li>
+            <li><b>מושב PG145 (19/09):</b> ${p.seat_pg145}</li>
+            <li><b>מושב PG146 (26/09):</b> ${p.seat_pg146}</li>
+            <li><b>ארוחה מיוחדת:</b> ${p.meal_pg146}</li>
+          </ul>
+        `;
+        seatsContainer.appendChild(card);
+      });
+    }
+  })
+  .catch(error => console.error('שגיאה בטעינת קובץ data.json:', error));
+
 };
 
 var DAYS = [
