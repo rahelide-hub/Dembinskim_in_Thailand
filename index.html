@@ -15,7 +15,7 @@ body{margin:0}
 img{max-width:100%}
 [hidden]{display:none!important}
 </style>
-<title>הדמבינסקים בתאילנד</title>
+<title>תאילנד דמבינסקי</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Assistant:wght@300;400;600;700&display=swap">
@@ -72,13 +72,15 @@ header.top{
 .brand{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .brand h1{font-size:23px;font-weight:900;letter-spacing:-.01em}
 .brand .sub{font-size:12.5px;color:var(--muted);letter-spacing:.06em;font-weight:600}
-.tabs{display:flex;gap:2px;overflow-x:auto;margin-top:12px;scrollbar-width:none}
-.tabs::-webkit-scrollbar{display:none}
+.tabs{display:flex;gap:2px;margin-top:12px;flex-wrap:wrap}
 .tab{
+  flex:0 0 auto;
   background:none;border:0;border-bottom:2px solid transparent;
-  padding:9px 13px 10px;white-space:nowrap;color:var(--muted);font-weight:600;font-size:14.5px;
+  padding:9px 12px 10px;white-space:nowrap;color:var(--muted);font-weight:600;font-size:14.5px;
 }
 .tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--gold)}
+@media (max-width:410px){ .tab{padding:9px 8px 10px;font-size:13.8px} }
+@media (max-width:340px){ .tabs{gap:0} .tab{padding:8px 6px 9px;font-size:13.2px} }
 main{padding:0 18px}
 section[role="tabpanel"]{padding-top:20px}
 
@@ -220,8 +222,9 @@ td .ty{font-size:11.5px;color:var(--muted)}
 .ck input{appearance:none;flex:0 0 auto;width:19px;height:19px;margin:2px 0 0;border:1.5px solid var(--line2);
   border-radius:5px;background:var(--surface);display:grid;place-content:center;cursor:pointer}
 .ck input:checked{background:var(--ok);border-color:var(--ok)}
-.ck input:checked::after{content:"";width:10px;height:6px;border:2px solid var(--paper);border-top:0;
-  border-inline-end:0;transform:rotate(-45deg) translate(1px,-1px)}
+/* physical borders on purpose: logical ones flip in RTL and draw an arrow, not a check */
+.ck input:checked::after{content:"";width:10px;height:6px;border:2px solid var(--paper);
+  border-top:0;border-right:0;transform:rotate(-45deg) translate(1px,-1px)}
 .ck .lbl{flex:1;min-width:0;font-size:14px}
 .ck .lbl small{display:block;font-size:11.5px;color:var(--muted)}
 .ck input:checked ~ .lbl{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--line2)}
@@ -260,19 +263,19 @@ footer{padding:28px 18px 10px;text-align:center;font-size:12px;color:var(--muted
       <h1>תאילנד · משפחת דמבינסקי</h1>
       <div class="sub num">10.09.26 – 29.09.26 · PNR 8Q53O2</div>
     </div>
-    <div class="tabs" role="tablist" id="tabs">
-      <button class="tab" role="tab" aria-selected="true" data-p="p1">מסלול</button>
-      <button class="tab" role="tab" aria-selected="false" data-p="p2">לוגיסטיקה</button>
-      <button class="tab" role="tab" aria-selected="false" data-p="p3">נוסעים</button>
-      <button class="tab" role="tab" aria-selected="false" data-p="p4">ללא גלוטן</button>
-      <button class="tab" role="tab" aria-selected="false" data-p="p5">הכנות</button>
+    <div class="tabs" role="tablist" id="tabs" aria-label="מסכי הטיול">
+      <button type="button" class="tab" role="tab" id="tab-p1" aria-controls="p1" aria-selected="true" data-p="p1">מסלול</button>
+      <button type="button" class="tab" role="tab" id="tab-p2" aria-controls="p2" aria-selected="false" tabindex="-1" data-p="p2">לוגיסטיקה</button>
+      <button type="button" class="tab" role="tab" id="tab-p3" aria-controls="p3" aria-selected="false" tabindex="-1" data-p="p3">נוסעים</button>
+      <button type="button" class="tab" role="tab" id="tab-p4" aria-controls="p4" aria-selected="false" tabindex="-1" data-p="p4">ללא גלוטן</button>
+      <button type="button" class="tab" role="tab" id="tab-p5" aria-controls="p5" aria-selected="false" tabindex="-1" data-p="p5">הכנות</button>
     </div>
   </div>
 </header>
 
 <main>
   <!-- ========== מסלול ========== -->
-  <section role="tabpanel" id="p1">
+  <section role="tabpanel" id="p1" aria-labelledby="tab-p1">
     <div class="today" id="today"></div>
     <div class="stats">
       <div><b class="num">19</b><span>ימי טיול</span></div>
@@ -298,7 +301,7 @@ footer{padding:28px 18px 10px;text-align:center;font-size:12px;color:var(--muted
   </section>
 
   <!-- ========== לוגיסטיקה ========== -->
-  <section role="tabpanel" id="p2" hidden>
+  <section role="tabpanel" id="p2" aria-labelledby="tab-p2" hidden>
     <div class="blockhead">
       <h2>לוח טיסות מלא</h2>
       <p>ITA Airways בקווים הבינלאומיים, Thai Airways ו‑Bangkok Airways בפנים הארץ. כבודה: מזוודה אחת 23 ק״ג לנוסע.</p>
@@ -313,7 +316,7 @@ footer{padding:28px 18px 10px;text-align:center;font-size:12px;color:var(--muted
   </section>
 
   <!-- ========== נוסעים ========== -->
-  <section role="tabpanel" id="p3" hidden>
+  <section role="tabpanel" id="p3" aria-labelledby="tab-p3" hidden>
     <div class="blockhead">
       <h2>מושבים וארוחות</h2>
       <p>שמונה נוסעים. תמר מסומנת בזהב, היא היחידה עם דרישת ללא גלוטן.</p>
@@ -329,7 +332,7 @@ footer{padding:28px 18px 10px;text-align:center;font-size:12px;color:var(--muted
   </section>
 
   <!-- ========== ללא גלוטן ========== -->
-  <section role="tabpanel" id="p4" hidden>
+  <section role="tabpanel" id="p4" aria-labelledby="tab-p4" hidden>
     <div class="blockhead">
       <h2>לארוז מהארץ</h2>
       <p>ארבעה פריטים שאין להם תחליף בתאילנד.</p>
@@ -343,7 +346,7 @@ footer{padding:28px 18px 10px;text-align:center;font-size:12px;color:var(--muted
   </section>
 
   <!-- ========== הכנות ========== -->
-  <section role="tabpanel" id="p5" hidden>
+  <section role="tabpanel" id="p5" aria-labelledby="tab-p5" hidden>
     <div class="blockhead">
       <h2>משימות לפני הטיסה</h2>
       <p>הסימון נשמר ומשותף לכל מי שפותח את הדף.</p>
@@ -378,474 +381,6 @@ footer{padding:28px 18px 10px;text-align:center;font-size:12px;color:var(--muted
 </div>
 
 <script>
-  
-<!DOCTYPE html>
-<html lang="he" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>הדמבינסקים בתאילנד 2026 🇹🇭</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary-color: #0984e3;
-      --accent-orange: #e67e22;
-      --accent-green: #2ecc71;
-      --bg-color: #f8f9fa;
-      --card-bg: #ffffff;
-      --text-color: #2d3436;
-      --text-muted: #636e72;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Rubik', sans-serif;
-    }
-
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.6;
-      padding-bottom: 30px;
-    }
-
-    header {
-      background: linear-gradient(135deg, #0984e3, #6c5ce7);
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    header h1 {
-      font-size: 1.8rem;
-      margin-bottom: 5px;
-    }
-
-    header p {
-      font-size: 0.95rem;
-      opacity: 0.9;
-    }
-
-    /* ניווט בלשוניות (Tabs) */
-    .tabs-nav {
-      display: flex;
-      justify-content: space-around;
-      background: white;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      border-bottom: 2px solid #edf2f7;
-    }
-
-    .tab-btn {
-      flex: 1;
-      padding: 12px 5px;
-      border: none;
-      background: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--text-muted);
-      cursor: pointer;
-      border-bottom: 3px solid transparent;
-      transition: all 0.3s ease;
-    }
-
-    .tab-btn.active {
-      color: var(--primary-color);
-      border-bottom-color: var(--primary-color);
-      font-weight: 700;
-    }
-
-    .container {
-      max-width: 600px;
-      margin: 15px auto;
-      padding: 0 12px;
-    }
-
-    .tab-content {
-      display: none;
-    }
-
-    .tab-content.active {
-      display: block;
-    }
-
-    /* כרטיסיית מסלול יומי */
-    .card {
-      background: var(--card-bg);
-      border-radius: 12px;
-      padding: 16px;
-      margin-bottom: 14px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      border-right: 5px solid var(--primary-color);
-    }
-
-    .card.itinerary-card {
-      border-right-color: var(--accent-orange);
-    }
-
-    .card.flight-card {
-      border-right-color: var(--primary-color);
-      background: #f4f8ff;
-    }
-
-    .card.gf-card {
-      border-right-color: var(--accent-green);
-      background: #f0fff4;
-    }
-
-    .card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 10px;
-      border-bottom: 1px solid #f1f2f6;
-      padding-bottom: 6px;
-    }
-
-    .card-title {
-      font-size: 1.1rem;
-      color: #2c3e50;
-      font-weight: 700;
-    }
-
-    .badge {
-      background: #e17055;
-      color: white;
-      padding: 3px 8px;
-      border-radius: 12px;
-      font-size: 0.75rem;
-      font-weight: 500;
-    }
-
-    .badge.confirmed {
-      background: #2ecc71;
-    }
-
-    .card p {
-      margin-bottom: 6px;
-      font-size: 0.92rem;
-    }
-
-    .card p strong {
-      color: #34495e;
-    }
-
-    .notes {
-      font-size: 0.85rem !important;
-      color: var(--text-muted);
-      background: #f8f9fa;
-      padding: 8px;
-      border-radius: 6px;
-      margin-top: 8px;
-    }
-
-    /* פילטר מבוסס בחירה (Select) */
-    .filter-box {
-      margin-bottom: 15px;
-      background: white;
-      padding: 10px;
-      border-radius: 8px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-    }
-
-    .filter-box label {
-      font-size: 0.9rem;
-      font-weight: 700;
-      margin-bottom: 5px;
-      display: block;
-    }
-
-    .filter-box select {
-      width: 100%;
-      padding: 8px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 0.95rem;
-    }
-
-    /* רשימת הושבה אישית */
-    .seat-list {
-      list-style: none;
-      margin-top: 8px;
-    }
-
-    .seat-list li {
-      padding: 6px 0;
-      border-bottom: 1px dashed #eee;
-      font-size: 0.9rem;
-    }
-
-    /* צ'קבוקס למשימות */
-    .task-item {
-      display: flex;
-      align-items: center;
-      padding: 8px;
-      border-bottom: 1px solid #f1f2f6;
-    }
-
-    .task-item input {
-      margin-left: 10px;
-      width: 18px;
-      height: 18px;
-    }
-
-    .loading {
-      text-align: center;
-      padding: 30px;
-      color: var(--text-muted);
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1 id="app-title">הדמבינסקים בתאילנד 2026 🇹🇭</h1>
-    <p id="app-subtitle">טוען נתונים...</p>
-  </header>
-
-  <nav class="tabs-nav">
-    <button class="tab-btn active" onclick="switchTab('itinerary')">📅 לו"ז יומי</button>
-    <button class="tab-btn" onclick="switchTab('flights')">✈️ טיסות ומושבים</button>
-    <button class="tab-btn" onclick="switchTab('gluten-free')">🍽️ ללא גלוטן</button>
-    <button class="tab-btn" onclick="switchTab('tasks')">✅ ציוד ומשימות</button>
-  </nav>
-
-  <main class="container">
-    <div id="loading-spinner" class="loading">טוען נתונים מתוך data.json...</div>
-
-    <!-- טאב 1: לו"ז יומי -->
-    <section id="itinerary-tab" class="tab-content active"></section>
-
-    <!-- טאב 2: טיסות והושבה -->
-    <section id="flights-tab" class="tab-content">
-      <div class="filter-box">
-        <label for="passenger-select">👤 בחר בן משפחה להצגת מושבים אישית:</label>
-        <select id="passenger-select" onchange="renderPassengerSeats()">
-          <option value="ALL">-- הצג את כל 8 הנוסעים --</option>
-        </select>
-      </div>
-
-      <h3 style="margin: 15px 0 10px;">📋 לוח טיסות מלא</h3>
-      <div id="flight-schedule-list"></div>
-
-      <h3 style="margin: 20px 0 10px;">💺 פירוט הושבה וארוחות</h3>
-      <div id="passenger-seats-list"></div>
-    </section>
-
-    <!-- טאב 3: ללא גלוטן והמלצות -->
-    <section id="gluten-free-tab" class="tab-content">
-      <div class="filter-box">
-        <label for="location-select">🌍 סנן לפי אזור:</label>
-        <select id="location-select" onchange="renderRecommendations()">
-          <option value="ALL">כל האזורים</option>
-          <option value="בנגקוק">בנגקוק</option>
-          <option value="צ'יאנג מאי">צ'יאנג מאי</option>
-          <option value="פאי">פאי</option>
-          <option value="קוסמוי">קוסמוי</option>
-        </select>
-      </div>
-      <div id="recommendations-list"></div>
-    </section>
-
-    <!-- טאב 4: משימות וציוד -->
-    <section id="tasks-tab" class="tab-content">
-      <h3 style="margin-bottom: 10px;">📝 משימות לקראת הטיסה</h3>
-      <div id="tasks-list" class="card"></div>
-
-      <h3 style="margin: 20px 0 10px;">🎒 רשימת ציוד מומלצת</h3>
-      <div id="packing-list" class="card"></div>
-    </section>
-  </main>
-
-  <script>
-    let globalData = null;
-
-    // טעינת הנתונים מתוך data.json
-    fetch('./data.json')
-      .then(response => {
-        if (!response.ok) throw new Error("לא ניתן לקרוא את data.json");
-        return response.json();
-      })
-      .then(data => {
-        globalData = data;
-        document.getElementById('loading-spinner').style.display = 'none';
-        document.getElementById('app-subtitle').innerText = `קוד הזמנה: ${data.pnr || '8Q53O2'} | ${data.passengers_count || 8} נוסעים`;
-
-        renderItinerary();
-        setupPassengerSelect();
-        renderFlightSchedule();
-        renderPassengerSeats();
-        renderRecommendations();
-        renderTasks();
-      })
-      .catch(err => {
-        console.error(err);
-        document.getElementById('loading-spinner').innerText = "שגיאה בטעינת הקובץ data.json. ודא שהקובץ קיים ב-repository.";
-      });
-
-    // מעבר בין לשוניות
-    function switchTab(tabName) {
-      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-
-      event.target.classList.add('active');
-      document.getElementById(`${tabName}-tab`).classList.add('active');
-    }
-
-    // 1. רינדור לו"ז יומי
-    function renderItinerary() {
-      const container = document.getElementById('itinerary-tab');
-      container.innerHTML = '';
-
-      if (!globalData || !globalData.itinerary) return;
-
-      globalData.itinerary.forEach(day => {
-        const card = document.createElement('div');
-        card.className = 'card itinerary-card';
-        card.innerHTML = `
-          <div class="card-header">
-            <span class="card-title">${day.day} | ${day.date} - ${day.destination}</span>
-            <span class="badge ${day.status === 'הוזמן' ? 'confirmed' : ''}">${day.status}</span>
-          </div>
-          <p><strong>🏨 לינה:</strong> ${day.hotel}</p>
-          <p><strong>📍 פעילויות:</strong> ${day.activities}</p>
-          <p><strong>🚌 לוגיסטיקה:</strong> ${day.logistics}</p>
-          ${day.notes ? `<div class="notes">💬 <b>הערות:</b> ${day.notes}</div>` : ''}
-        `;
-        container.appendChild(card);
-      });
-    }
-
-    // 2. הגדרת פילטר נוסעים
-    function setupPassengerSelect() {
-      const select = document.getElementById('passenger-select');
-      if (!globalData || !globalData.passengers_seats) return;
-
-      globalData.passengers_seats.forEach(p => {
-        const opt = document.createElement('option');
-        opt.value = p.passenger_id;
-        opt.innerText = `${p.name} (${p.type})`;
-        select.appendChild(opt);
-      });
-    }
-
-    // 3. רינדור לוח טיסות מלא
-    function renderFlightSchedule() {
-      const container = document.getElementById('flight-schedule-list');
-      container.innerHTML = '';
-
-      if (!globalData || !globalData.flights_schedule) return;
-
-      globalData.flights_schedule.forEach(f => {
-        const card = document.createElement('div');
-        card.className = 'card flight-card';
-        card.innerHTML = `
-          <div class="card-header">
-            <span class="card-title">✈️ ${f.flight} - ${f.airline}</span>
-          </div>
-          <p>🛫 <b>מוצא:</b> ${f.from} (${f.dep_time})</p>
-          <p>🛬 <b>יעד:</b> ${f.to} (${f.arr_time})</p>
-          <p style="font-size:0.85rem; color:#636e72;">⏱️ <b>משך/קונקשן:</b> ${f.duration}</p>
-        `;
-        container.appendChild(card);
-      });
-    }
-
-    // 4. רינדור הושבה וארוחות מיוחדות
-    function renderPassengerSeats() {
-      const container = document.getElementById('passenger-seats-list');
-      const selectedId = document.getElementById('passenger-select').value;
-      container.innerHTML = '';
-
-      if (!globalData || !globalData.passengers_seats) return;
-
-      const filtered = selectedId === 'ALL' 
-        ? globalData.passengers_seats 
-        : globalData.passengers_seats.filter(p => p.passenger_id === selectedId);
-
-      filtered.forEach(p => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `
-          <div class="card-header">
-            <span class="card-title">👤 ${p.name}</span>
-            <span class="badge confirmed">${p.type}</span>
-          </div>
-          <ul class="seat-list">
-            <li><b>טיסת PG216 (19/09):</b> מושב ${p.seat_pg216 || '-'}</li>
-            <li><b>טיסת PG145 (19/09):</b> מושב ${p.seat_pg145 || '-'}</li>
-            <li><b>טיסת PG146 (26/09):</b> מושב ${p.seat_pg146 || '-'}</li>
-            <li><b>ארוחה מיוחדת (PG146):</b> <span style="color:#e67e22; font-weight:bold;">${p.meal_pg146 || 'רגיל'}</span></li>
-          </ul>
-        `;
-        container.appendChild(card);
-      });
-    }
-
-    // 5. רינדור המלצות וללא גלוטן
-    function renderRecommendations() {
-      const container = document.getElementById('recommendations-list');
-      const selectedLoc = document.getElementById('location-select').value;
-      container.innerHTML = '';
-
-      if (!globalData) return;
-
-      const gfList = globalData.gluten_free_guide || [];
-      const recList = globalData.recommendations || [];
-
-      // איחוד רשימות
-      let combined = [...gfList.map(item => ({...item, isGF: true})), ...recList.map(item => ({...item, isGF: false}))];
-
-      if (selectedLoc !== 'ALL') {
-        combined = combined.filter(item => item.location && item.location.includes(selectedLoc));
-      }
-
-      combined.forEach(item => {
-        const card = document.createElement('div');
-        card.className = `card ${item.isGF ? 'gf-card' : ''}`;
-        card.innerHTML = `
-          <div class="card-header">
-            <span class="card-title">${item.isGF ? '🌾' : '📍'} ${item.name}</span>
-            <span class="badge" style="background:#27ae60;">${item.location}</span>
-          </div>
-          <p><b>קטגוריה:</b> ${item.category}</p>
-          <p>💡 <b>טיפים ומידע:</b> ${item.details}</p>
-          <p style="font-size:0.85rem; color:#7f8c8d;">💰 <b>מחיר/אישור:</b> ${item.price || item.price_booking || 'רגיל'}</p>
-        `;
-        container.appendChild(card);
-      });
-    }
-
-    // 6. רינדור משימות וציוד
-    function renderTasks() {
-      const tasksContainer = document.getElementById('tasks-list');
-      const packingContainer = document.getElementById('packing-list');
-
-      if (!globalData || !globalData.preparation_checklist) return;
-
-      tasksContainer.innerHTML = '';
-      packingContainer.innerHTML = '';
-
-      globalData.preparation_checklist.forEach((item, idx) => {
-        if (item.task) {
-          const div = document.createElement('div');
-          div.className = 'task-item';
-          div.innerHTML = `
-            <input type="checkbox" id="task-${idx}" ${item.status === 'בוצע' ? 'checked' : ''}>
-            <label for="task-${idx}"><b>${item.task}</b> (אחראי: ${item.owner || 'כולם'})</label>
-          `;
-          tasksContainer.appendChild(div);
-        }
-      });
-    }
-  </script>
-</body>
-</html>
 "use strict";
 
 var LOC = {
@@ -854,60 +389,6 @@ var LOC = {
   cnx:{name:"צ׳יאנג מאי", c:"var(--cnx)"},
   pai:{name:"פאי", c:"var(--pai)"},
   usm:{name:"קוסמוי", c:"var(--usm)"}
-etch('./data.json')
-  .then(response => response.json())
-  .then(data => {
-    console.log("נתוני הטיול נטענו בהצלחה:", data);
-    
-    // 1. עדכון כותרת הטיול
-    const titleElement = document.getElementById('trip-title');
-    if (titleElement) titleElement.innerText = data.title;
-    
-    // 2. בניה דינמית של כרטיסיות הלו"ז היומי (Itinerary)
-    const itineraryContainer = document.getElementById('itinerary-container');
-    if (itineraryContainer) {
-      itineraryContainer.innerHTML = ''; // ניקוי תוכן ישן
-      
-      data.itinerary.forEach(day => {
-        const card = document.createElement('div');
-        card.className = 'day-card';
-        card.innerHTML = `
-          <div class="card-header">
-            <h3>${day.day} | ${day.date} - ${day.destination}</h3>
-            <span class="status-badge">${day.status}</span>
-          </div>
-          <p><strong>🏨 לינה:</strong> ${day.hotel}</p>
-          <p><strong>📍 פעילויות:</strong> ${day.activities}</p>
-          <p><strong>🚌 טיסות ולוגיסטיקה:</strong> ${day.logistics}</p>
-          <p class="notes"><strong>💬 הערות וטיפים:</strong> ${day.notes}</p>
-        `;
-        itineraryContainer.appendChild(card);
-      });
-    }
-
-    // 3. בניה דינמית של כרטיסיות הושבה וטיסות (Passengers & Seats)
-    const seatsContainer = document.getElementById('seats-container');
-    if (seatsContainer && data.passengers_seats) {
-      seatsContainer.innerHTML = '';
-      
-      data.passengers_seats.forEach(p => {
-        const card = document.createElement('div');
-        card.className = 'seat-card';
-        card.innerHTML = `
-          <h4>👤 ${p.name} (${p.type})</h4>
-          <ul>
-            <li><b>מושב PG216 (19/09):</b> ${p.seat_pg216}</li>
-            <li><b>מושב PG145 (19/09):</b> ${p.seat_pg145}</li>
-            <li><b>מושב PG146 (26/09):</b> ${p.seat_pg146}</li>
-            <li><b>ארוחה מיוחדת:</b> ${p.meal_pg146}</li>
-          </ul>
-        `;
-        seatsContainer.appendChild(card);
-      });
-    }
-  })
-  .catch(error => console.error('שגיאה בטעינת קובץ data.json:', error));
-
 };
 
 var DAYS = [
@@ -1495,7 +976,7 @@ function buildList(hostSel,items,group){
 function updateProgress(){
   [["#prog-task","#bar-task",TASKS],["#prog-pack","#bar-pack",PACK]].forEach(function(cfg){
     var done=cfg[2].filter(function(i){return !!checks[i.id];}).length;
-    $(cfg[0]).textContent=done+" / "+cfg[2].length;
+    $(cfg[0]).textContent=done+" מתוך "+cfg[2].length;
     $(cfg[1]).style.width=(done/cfg[2].length*100)+"%";
   });
 }
@@ -1546,15 +1027,42 @@ function pushRemote(id,val){
 /* ---------------- tabs ---------------- */
 (function(){
   var tabs=$("#tabs");
-  tabs.addEventListener("click",function(ev){
-    var b=ev.target.closest(".tab"); if(!b) return;
-    Array.prototype.forEach.call(tabs.children,function(t){
+  var btns=Array.prototype.slice.call(tabs.querySelectorAll(".tab"));
+
+  function select(b,moveFocus){
+    if(!b) return;
+    btns.forEach(function(t){
       var on=t===b;
       t.setAttribute("aria-selected",on?"true":"false");
-      document.getElementById(t.dataset.p).hidden=!on;
+      t.tabIndex=on?0:-1;
+      var p=document.getElementById(t.dataset.p);
+      if(p) p.hidden=!on;
     });
-    window.scrollTo({top:0,behavior:"instant"});
+    if(moveFocus) b.focus();
+    window.scrollTo(0,0);
+  }
+
+  tabs.addEventListener("click",function(ev){
+    var b=ev.target.closest?ev.target.closest(".tab"):null;
+    if(!b||btns.indexOf(b)<0) return;
+    select(b,false);
   });
+
+  /* keyboard: arrows move between tabs. RTL, so left goes forward. */
+  tabs.addEventListener("keydown",function(ev){
+    var i=btns.indexOf(document.activeElement);
+    if(i<0) return;
+    var to=-1;
+    if(ev.key==="ArrowLeft"||ev.key==="ArrowDown") to=(i+1)%btns.length;
+    else if(ev.key==="ArrowRight"||ev.key==="ArrowUp") to=(i-1+btns.length)%btns.length;
+    else if(ev.key==="Home") to=0;
+    else if(ev.key==="End") to=btns.length-1;
+    if(to<0) return;
+    ev.preventDefault();
+    select(btns[to],true);
+  });
+
+  select(btns[0],false);
 })();
 </script>
 </body>
