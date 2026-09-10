@@ -1,0 +1,1039 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="מסלול הטיול המשפחתי של משפחת דמבינסקי בתאילנד, ספטמבר 2026.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#EFF1EE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101413" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%98%3C/text%3E%3C/svg%3E">
+<style>
+/* base reset — supplied by the Artifact host in the hosted build */
+html{-webkit-text-size-adjust:100%}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<title>תאילנד דמבינסקי</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Assistant:wght@300;400;600;700&display=swap">
+<style>
+:root{
+  --paper:#EFF1EE; --surface:#FFFFFF; --surface2:#F6F8F5; --sunk:#E7EAE6;
+  --ink:#171F1C; --ink2:#44534D; --muted:#78857F; --line:#DCE2DD; --line2:#C9D2CB;
+  --gold:#A87B27;
+  --bkk:#AC4429; --cnx:#33745A; --pai:#836324; --usm:#22688B; --air:#565A78;
+  --warn:#A2620F; --warnbg:#F6EEDF; --ok:#33745A; --okbg:#E5EFE9; --alert:#AC4429; --alertbg:#F7E9E4;
+  --shadow:0 1px 2px rgba(23,31,28,.05), 0 6px 18px -10px rgba(23,31,28,.16);
+  --r:10px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#101413; --surface:#181E1B; --surface2:#1E2521; --sunk:#141A17;
+    --ink:#E7ECE8; --ink2:#AEBBB4; --muted:#84908A; --line:#2A332E; --line2:#3A453E;
+    --gold:#D5AC5C;
+    --bkk:#E4855F; --cnx:#6FBC97; --pai:#CCA557; --usm:#5FADD4; --air:#9FA3C9;
+    --warn:#D9A75C; --warnbg:#2B2418; --ok:#6FBC97; --okbg:#17271F; --alert:#E4855F; --alertbg:#2B1B16;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 22px -12px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#101413; --surface:#181E1B; --surface2:#1E2521; --sunk:#141A17;
+  --ink:#E7ECE8; --ink2:#AEBBB4; --muted:#84908A; --line:#2A332E; --line2:#3A453E;
+  --gold:#D5AC5C;
+  --bkk:#E4855F; --cnx:#6FBC97; --pai:#CCA557; --usm:#5FADD4; --air:#9FA3C9;
+  --warn:#D9A75C; --warnbg:#2B2418; --ok:#6FBC97; --okbg:#17271F; --alert:#E4855F; --alertbg:#2B1B16;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 22px -12px rgba(0,0,0,.7);
+}
+
+*{box-sizing:border-box}
+body{
+  direction:rtl; background:var(--paper); color:var(--ink);
+  font-family:"Assistant","Segoe UI",system-ui,sans-serif;
+  font-size:15px; line-height:1.6; margin:0;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:"Frank Ruhl Libre",Georgia,serif;font-weight:700;margin:0;text-wrap:balance;line-height:1.25}
+p{margin:0}
+a{color:inherit}
+button{font-family:inherit;font-size:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:4px}
+.num{font-variant-numeric:tabular-nums}
+
+/* ---------- shell ---------- */
+.wrap{max-width:820px;margin:0 auto;padding:0 0 72px}
+header.top{
+  background:var(--surface); border-bottom:1px solid var(--line);
+  position:sticky; top:0; z-index:20;
+}
+.topin{max-width:820px;margin:0 auto;padding:14px 18px 0}
+.brand{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand h1{font-size:23px;font-weight:900;letter-spacing:-.01em}
+.brand .sub{font-size:12.5px;color:var(--muted);letter-spacing:.06em;font-weight:600}
+.tabs{display:flex;gap:2px;overflow-x:auto;margin-top:12px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{
+  background:none;border:0;border-bottom:2px solid transparent;
+  padding:9px 13px 10px;white-space:nowrap;color:var(--muted);font-weight:600;font-size:14.5px;
+}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--gold)}
+main{padding:0 18px}
+section[role="tabpanel"]{padding-top:20px}
+
+/* ---------- overview ---------- */
+.today{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:14px 16px;display:flex;align-items:center;gap:14px;box-shadow:var(--shadow);
+}
+.today .badge{
+  flex:0 0 auto;width:52px;height:52px;border-radius:8px;background:var(--sunk);
+  display:grid;place-content:center;text-align:center;line-height:1.1;
+}
+.today .badge b{font-family:"Frank Ruhl Libre",serif;font-size:21px;display:block}
+.today .badge span{font-size:10.5px;color:var(--muted);letter-spacing:.08em}
+.today .txt strong{display:block;font-size:16px;font-family:"Frank Ruhl Libre",serif}
+.today .txt span{font-size:13.5px;color:var(--ink2)}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:12px}
+.stats div{background:var(--surface);padding:11px 10px;text-align:center}
+.stats b{display:block;font-family:"Frank Ruhl Libre",serif;font-size:19px;font-variant-numeric:tabular-nums}
+.stats span{font-size:11.5px;color:var(--muted);letter-spacing:.03em}
+
+/* ---------- notices ---------- */
+.notices{margin-top:20px;border-radius:var(--r);border:1px solid var(--line);background:var(--surface);overflow:hidden}
+.notices > h2{
+  font-size:14px;padding:11px 16px;background:var(--warnbg);color:var(--warn);
+  letter-spacing:.02em;border-bottom:1px solid var(--line);font-family:"Assistant",sans-serif;font-weight:700;
+}
+.notices ul{list-style:none;margin:0;padding:0}
+.notices li{padding:11px 16px;border-bottom:1px solid var(--line);font-size:13.8px;color:var(--ink2)}
+.notices li:last-child{border-bottom:0}
+.notices li b{color:var(--ink);font-weight:700}
+
+/* ---------- filters ---------- */
+.filters{display:flex;gap:7px;flex-wrap:wrap;margin:22px 0 4px}
+.chipf{
+  border:1px solid var(--line2);background:var(--surface);border-radius:99px;
+  padding:5px 13px;font-size:13px;font-weight:600;color:var(--ink2);
+}
+.chipf[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* ---------- timeline ---------- */
+.leg{margin-top:26px}
+.leghead{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.leghead .dot{width:9px;height:9px;border-radius:99px;background:var(--c);flex:0 0 auto}
+.leghead h2{font-size:15px;letter-spacing:.02em;font-family:"Assistant",sans-serif;font-weight:700;color:var(--c)}
+.leghead .rule{flex:1;height:1px;background:var(--line)}
+.leghead .cnt{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+
+.day{position:relative;padding-right:20px;margin-bottom:14px}
+.day::before{content:"";position:absolute;right:5px;top:6px;bottom:-14px;width:2px;background:var(--line)}
+.day:last-child::before{bottom:auto;height:26px}
+.day::after{content:"";position:absolute;right:1px;top:12px;width:10px;height:10px;border-radius:99px;
+  background:var(--surface);border:2px solid var(--c)}
+.day.is-today::after{background:var(--c);box-shadow:0 0 0 4px color-mix(in srgb,var(--c) 22%,transparent)}
+.daycard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.day.is-today .daycard{border-color:var(--c)}
+.dhead{display:flex;gap:12px;align-items:flex-start;padding:12px 15px 11px;border-bottom:1px solid var(--line);background:var(--surface2)}
+.dhead .dd{flex:0 0 auto;text-align:center;min-width:40px}
+.dhead .dd b{display:block;font-family:"Frank Ruhl Libre",serif;font-size:20px;line-height:1;font-variant-numeric:tabular-nums}
+.dhead .dd span{font-size:11px;color:var(--muted)}
+.dhead .dt{flex:1;min-width:0}
+.dhead .dt h3{font-size:16.5px}
+.dhead .dt .stay{font-size:12.8px;color:var(--muted);margin-top:1px}
+.dhead .dt .stay a{color:var(--ink2);text-decoration-color:var(--line2);text-underline-offset:2px}
+.dnum{font-size:11px;color:var(--muted);letter-spacing:.08em;font-variant-numeric:tabular-nums;padding-top:3px}
+
+.chips{display:flex;gap:5px;flex-wrap:wrap;padding:9px 15px 0}
+.chip{font-size:11.5px;font-weight:600;padding:2.5px 9px;border-radius:99px;border:1px solid var(--line2);color:var(--ink2);background:var(--surface)}
+.chip.hol{background:var(--sunk);border-color:var(--line2);color:var(--ink2)}
+.chip.gold{color:var(--gold);border-color:color-mix(in srgb,var(--gold) 45%,transparent);background:color-mix(in srgb,var(--gold) 9%,transparent)}
+.chip.ok{color:var(--ok);border-color:color-mix(in srgb,var(--ok) 40%,transparent);background:var(--okbg)}
+.chip.plan{color:var(--warn);border-color:color-mix(in srgb,var(--warn) 40%,transparent);background:var(--warnbg)}
+.chip.cost{font-variant-numeric:tabular-nums}
+
+.tl{list-style:none;margin:0;padding:11px 15px 13px}
+.tl li{display:flex;gap:11px;padding:5px 0;font-size:14.2px;color:var(--ink2)}
+.tl li time{flex:0 0 46px;font-variant-numeric:tabular-nums;font-weight:700;font-size:13px;color:var(--c);padding-top:1px}
+.tl li time.blank{color:var(--line2)}
+.tl li p{flex:1;min-width:0}
+.tl li p b{color:var(--ink);font-weight:600}
+
+.dnote{display:flex;gap:9px;margin:0 15px 13px;padding:9px 11px;border-radius:8px;background:var(--sunk);font-size:13px;color:var(--ink2)}
+.dnote .k{flex:0 0 auto;font-weight:700;color:var(--ink);font-size:12px;letter-spacing:.02em}
+.dnote.gf{background:color-mix(in srgb,var(--gold) 10%,transparent)}
+.dnote.gf .k{color:var(--gold)}
+.dnote.flag{background:var(--alertbg)}
+.dnote.flag .k{color:var(--alert)}
+
+/* ---------- generic blocks ---------- */
+.blockhead{margin:26px 0 11px}
+.blockhead:first-child{margin-top:0}
+.blockhead h2{font-size:18px}
+.blockhead p{font-size:13.2px;color:var(--muted);margin-top:2px}
+
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.row{display:flex;gap:12px;align-items:center;padding:11px 15px;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+
+/* flights */
+.fl{display:grid;grid-template-columns:76px 1fr;gap:12px;padding:12px 15px;border-bottom:1px solid var(--line);align-items:start}
+.fl:last-child{border-bottom:0}
+.fl .code{font-weight:700;font-size:14px;font-variant-numeric:tabular-nums;color:var(--ink)}
+.fl .car{font-size:11.5px;color:var(--muted);display:block;font-weight:400}
+.fl .seg{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.fl .pt b{font-family:"Frank Ruhl Libre",serif;font-size:17px;font-variant-numeric:tabular-nums;display:block;line-height:1.2}
+.fl .pt span{font-size:12px;color:var(--muted);display:block}
+.fl .mid{flex:1;min-width:56px;position:relative;height:1px;background:var(--line2);align-self:center}
+.fl .mid em{position:absolute;inset-block-start:-17px;inset-inline-start:50%;transform:translateX(50%);
+  font-style:normal;font-size:11px;color:var(--muted);background:var(--surface);padding:0 6px;white-space:nowrap}
+.fl.conx{background:var(--surface2)}
+.fl.conx .code{color:var(--muted);font-weight:600;font-size:12.5px}
+.fl.conx .seg{font-size:13px;color:var(--ink2)}
+
+/* tables */
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13.4px;min-width:460px}
+th,td{padding:9px 11px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+th{background:var(--surface2);font-size:11.5px;letter-spacing:.05em;color:var(--muted);font-weight:700}
+td.s{font-variant-numeric:tabular-nums;font-weight:600}
+tr:last-child td{border-bottom:0}
+tr.hi td{background:color-mix(in srgb,var(--gold) 8%,transparent)}
+td .nm{font-weight:600;color:var(--ink)}
+td .ty{font-size:11.5px;color:var(--muted)}
+.dash{color:var(--line2)}
+
+/* gf cards */
+.cards{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+.gcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:13px 15px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:5px}
+.gcard h3{font-size:15.5px}
+.gcard .meta{display:flex;gap:7px;align-items:center;flex-wrap:wrap;font-size:11.5px;color:var(--muted)}
+.gcard .meta .price{font-weight:700;color:var(--gold);letter-spacing:.04em}
+.gcard p{font-size:13.2px;color:var(--ink2)}
+
+/* checklist */
+.ck{display:flex;gap:11px;align-items:flex-start;padding:10px 15px;border-bottom:1px solid var(--line);cursor:pointer}
+.ck:last-child{border-bottom:0}
+.ck input{appearance:none;flex:0 0 auto;width:19px;height:19px;margin:2px 0 0;border:1.5px solid var(--line2);
+  border-radius:5px;background:var(--surface);display:grid;place-content:center;cursor:pointer}
+.ck input:checked{background:var(--ok);border-color:var(--ok)}
+.ck input:checked::after{content:"";width:10px;height:6px;border:2px solid var(--paper);border-top:0;
+  border-inline-end:0;transform:rotate(-45deg) translate(1px,-1px)}
+.ck .lbl{flex:1;min-width:0;font-size:14px}
+.ck .lbl small{display:block;font-size:11.5px;color:var(--muted)}
+.ck input:checked ~ .lbl{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--line2)}
+.ckhead{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 15px;
+  background:var(--surface2);border-bottom:1px solid var(--line);font-size:12.5px;font-weight:700;color:var(--ink2)}
+.ckhead .prog{font-variant-numeric:tabular-nums;color:var(--muted);font-weight:600}
+.bar{height:3px;background:var(--sunk)}
+.bar i{display:block;height:100%;background:var(--ok);transition:width .25s ease}
+
+.sync{font-size:11.5px;color:var(--muted);padding:8px 15px;border-top:1px solid var(--line);background:var(--surface2)}
+.sync b{color:var(--ok)}
+
+/* budget */
+.bud{display:flex;justify-content:space-between;gap:12px;padding:9px 15px;border-bottom:1px solid var(--line);font-size:13.6px}
+.bud:last-of-type{border-bottom:0}
+.bud .amt{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
+.bud.tot{background:var(--surface2);font-weight:700;font-size:15px;border-top:1px solid var(--line2)}
+.bud.tot .amt{font-family:"Frank Ruhl Libre",serif}
+
+footer{padding:28px 18px 10px;text-align:center;font-size:12px;color:var(--muted)}
+
+@media (max-width:520px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .fl{grid-template-columns:1fr;gap:6px}
+  main{padding:0 13px}
+  .topin{padding:12px 13px 0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="topin">
+    <div class="brand">
+      <h1>תאילנד · משפחת דמבינסקי</h1>
+      <div class="sub num">10.09.26 – 29.09.26 · PNR 8Q53O2</div>
+    </div>
+    <div class="tabs" role="tablist" id="tabs">
+      <button class="tab" role="tab" aria-selected="true" data-p="p1">מסלול</button>
+      <button class="tab" role="tab" aria-selected="false" data-p="p2">לוגיסטיקה</button>
+      <button class="tab" role="tab" aria-selected="false" data-p="p3">נוסעים</button>
+      <button class="tab" role="tab" aria-selected="false" data-p="p4">ללא גלוטן</button>
+      <button class="tab" role="tab" aria-selected="false" data-p="p5">הכנות</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ========== מסלול ========== -->
+  <section role="tabpanel" id="p1">
+    <div class="today" id="today"></div>
+    <div class="stats">
+      <div><b class="num">19</b><span>ימי טיול</span></div>
+      <div><b class="num">4</b><span>יעדים</span></div>
+      <div><b class="num">8</b><span>נוסעים</span></div>
+      <div><b class="num">99,700</b><span>באט מוערך</span></div>
+    </div>
+
+    <div class="notices">
+      <h2>נקודות לבדיקה לפני ובמהלך הטיול</h2>
+      <ul>
+        <li><b>שעת סעודת ראש השנה.</b> במסלול היומי רשום 18:00, בגיליון ההמלצות 18:30. כדאי לאמת מול בית חב״ד.</li>
+        <li><b>ארוחה ללא גלוטן בטיסות Bangkok Airways.</b> לתמר מאושרת GFML ב‑TG 110 בלבד. ב‑PG 146 היא רשומה כ״רגיל״.</li>
+        <li><b>חמישה מושבים בלבד ב‑TG 110.</b> אריאל, רחלי ורינה אינם מופיעים בטבלת ההושבה של הטיסה לצ׳יאנג מאי.</li>
+        <li><b>צבי ורינה יוסף ללא מושבים ב‑19.09.</b> טיסות PG 216 ו‑PG 145 לקוסמוי מסומנות עבורם במקף.</li>
+        <li><b>קורגי ב‑26.09.</b> הנחיתה בבנגקוק ב‑16:40 והסבב האחרון בבית הקפה מסתיים ב‑18:00. לא בטוח שמספיקים.</li>
+        <li><b>מלון בנגקוק ל‑26–28.09.</b> ברשימת המשימות עדיין ״טרם התחיל״, אף שהמסלול מציג את Chatrium Grand.</li>
+      </ul>
+    </div>
+
+    <div class="filters" id="filters"></div>
+    <div id="timeline"></div>
+  </section>
+
+  <!-- ========== לוגיסטיקה ========== -->
+  <section role="tabpanel" id="p2" hidden>
+    <div class="blockhead">
+      <h2>לוח טיסות מלא</h2>
+      <p>ITA Airways בקווים הבינלאומיים, Thai Airways ו‑Bangkok Airways בפנים הארץ. כבודה: מזוודה אחת 23 ק״ג לנוסע.</p>
+    </div>
+    <div class="panel" id="flights"></div>
+
+    <div class="blockhead">
+      <h2>לינה</h2>
+      <p>שישה מקטעי לינה, מהם אחד עדיין לא סגור.</p>
+    </div>
+    <div class="cards" id="stays"></div>
+  </section>
+
+  <!-- ========== נוסעים ========== -->
+  <section role="tabpanel" id="p3" hidden>
+    <div class="blockhead">
+      <h2>מושבים וארוחות</h2>
+      <p>שמונה נוסעים. תמר מסומנת בזהב, היא היחידה עם דרישת ללא גלוטן.</p>
+    </div>
+    <div class="panel scroll">
+      <table id="pax"></table>
+    </div>
+    <div class="blockhead">
+      <h2>כרטיסים אלקטרוניים</h2>
+      <p>חמישה מספרי כרטיס מופיעים בהזמנה.</p>
+    </div>
+    <div class="panel" id="tix"></div>
+  </section>
+
+  <!-- ========== ללא גלוטן ========== -->
+  <section role="tabpanel" id="p4" hidden>
+    <div class="blockhead">
+      <h2>לארוז מהארץ</h2>
+      <p>ארבעה פריטים שאין להם תחליף בתאילנד.</p>
+    </div>
+    <div class="panel" id="gfpack"></div>
+    <div class="blockhead">
+      <h2>מסעדות בטוחות לפי יעד</h2>
+      <p>שתים‑עשרה כתובות שנבדקו, מסודרות לפי סדר הביקור.</p>
+    </div>
+    <div id="gfrest"></div>
+  </section>
+
+  <!-- ========== הכנות ========== -->
+  <section role="tabpanel" id="p5" hidden>
+    <div class="blockhead">
+      <h2>משימות לפני הטיסה</h2>
+      <p>הסימון נשמר ומשותף לכל מי שפותח את הדף.</p>
+    </div>
+    <div class="panel">
+      <div class="ckhead">משימות <span class="prog" id="prog-task"></span></div>
+      <div class="bar"><i id="bar-task"></i></div>
+      <div id="tasks"></div>
+      <div class="sync" id="sync-a">הסימון נשמר במכשיר הזה.</div>
+    </div>
+
+    <div class="blockhead">
+      <h2>רשימת אריזה</h2>
+      <p>שש‑עשרה פריטים, מקובצים לפי קטגוריה.</p>
+    </div>
+    <div class="panel">
+      <div class="ckhead">אריזה <span class="prog" id="prog-pack"></span></div>
+      <div class="bar"><i id="bar-pack"></i></div>
+      <div id="pack"></div>
+      <div class="sync" id="sync-b">הסימון נשמר במכשיר הזה.</div>
+    </div>
+
+    <div class="blockhead">
+      <h2>עלויות מוערכות</h2>
+      <p>פעילויות בלבד. טיסות, מלונות והווילה כבר שולמו ואינם נכללים.</p>
+    </div>
+    <div class="panel" id="budget"></div>
+  </section>
+</main>
+
+<footer>נבנה מתוך גיליון התכנון המשפחתי · המידע נכון לגרסת הגיליון מ‑10 בספטמבר 2026</footer>
+</div>
+
+<script>
+"use strict";
+
+var LOC = {
+  air:{name:"בין הארץ לתאילנד", c:"var(--air)"},
+  bkk:{name:"בנגקוק", c:"var(--bkk)"},
+  cnx:{name:"צ׳יאנג מאי", c:"var(--cnx)"},
+  pai:{name:"פאי", c:"var(--pai)"},
+  usm:{name:"קוסמוי", c:"var(--usm)"}
+};
+
+var DAYS = [
+{d:"2026-09-10",dow:"חמישי",loc:"air",place:"יציאה מהארץ",stay:"לינה בטיסה",status:"הוזמן",cost:0,
+ hol:[],
+ tl:[
+  {t:"05:15",x:"<b>AZ 809</b> מנתב״ג טרמינל 3 לרומא"},
+  {t:"08:00",x:"נחיתה ברומא FCO. קונקשן של 7 שעות ו‑15 דקות"},
+  {t:"15:15",x:"<b>AZ 758</b> מרומא לבנגקוק, טיסת לילה של 11 שעות ו‑10 דקות"}
+ ],
+ note:"כבודה מותרת: מזוודה אחת של 23 ק״ג לכל נוסע."},
+
+{d:"2026-09-11",dow:"שישי",loc:"bkk",place:"נחיתה בבנגקוק",stay:"Chatrium Grand Bangkok",status:"הוזמן",cost:0,
+ hol:["ערב ראש השנה תשפ״ז","ערב שבת"],
+ tl:[
+  {t:"07:25",x:"נחיתה ב‑BKK. הסעה משפחתית למלון ברובע סיאם"},
+  {t:"",x:"התאקלמות מג׳ט‑לג. <b>Siam Paragon</b> הממוזג בצהריים"},
+  {t:"",x:"מנוחה ובריכה במלון"},
+  {t:"18:00",x:"סעודת ערב ראש השנה ב<b>בית חב״ד בנגקוק</b>. הוזמן"},
+  {t:"",x:"סיור רגלי קל בסיאם סקוור"}
+ ],
+ gf:"בית חב״ד מספק מענה ללא גלוטן כולל שניצלים מותאמים לתמר.",
+ flag:"שעת הסעודה מופיעה כ‑18:00 במסלול וכ‑18:30 בגיליון ההמלצות."},
+
+{d:"2026-09-12",dow:"שבת",loc:"bkk",place:"בנגקוק מקצה לקצה",stay:"Chatrium Grand Bangkok",status:"הוזמן",cost:0,
+ hol:["שבת","א׳ ראש השנה"],
+ tl:[
+  {t:"05:50",x:"ריצת בוקר ב<b>פארק לומפיני</b>"},
+  {t:"09:00",x:"<b>שוק צ׳אטוצ׳אק</b> עד 10:45. להגיע מוקדם, לפני החום והקהל"},
+  {t:"13:00",x:"<b>ואט פו</b> והבודהה השוכב הענק"},
+  {t:"14:15",x:"שייט תעלות פרטי בסירת לונגטייל ברובע Thonburi"},
+  {t:"",x:"מנוחה ובריכה במלון"},
+  {t:"18:30",x:"<b>צ׳יינה טאון</b>, רחוב Yaowarat. אורות ניאון ואוכל רחוב"}
+ ],
+ gf:"לתמר: לאכול לפני צ׳יינה טאון ב‑Hard Rock Cafe בסיאם סקוור או ב‑25 Degrees Silom, כדי להימנע מזיהום צולב בדוכנים."},
+
+{d:"2026-09-13",dow:"ראשון",loc:"cnx",place:"מעבר לצפון",stay:"Meliá Chiang Mai",status:"הוזמן",cost:0,
+ hol:["ב׳ ראש השנה"],
+ tl:[
+  {t:"",x:"ארוחת בוקר ב‑Chatrium וצ׳ק אאוט"},
+  {t:"10:15",x:"נסיעה לשדה התעופה סוברנבהומי"},
+  {t:"13:30",x:"<b>TG 110</b> לצ׳יאנג מאי, נחיתה ב‑14:50"},
+  {t:"",x:"התארגנות ב‑Meliá Chiang Mai, רובע צ׳אנג קלאן"},
+  {t:"ערב",x:"<b>Sunday Walking Street</b>, שוק הלילה של יום ראשון"}
+ ],
+ gf:"מנגו סטיקי רייס בשוק הוא ללא גלוטן מטבעו. חלופה: Kat's Kitchen בעיר העתיקה, מודעות גבוהה לצליאק."},
+
+{d:"2026-09-14",dow:"שני",loc:"cnx",place:"פילים והר סותפ",stay:"Meliá Chiang Mai",status:"הוזמן",cost:2000,
+ hol:[],
+ tl:[
+  {t:"",x:"<b>Elefin Farm &amp; Cafe</b>, קפה בהרים עם פילים חופשיים והאכלה בבננות"},
+  {t:"",x:"<b>Wat Phra That Doi Suthep</b> על ההר"},
+  {t:"ערב",x:"ארוחה ב‑Butter Is Better ברובע צ׳אנג קלאן, או Favola במלון לה מרידיאן"}
+ ],
+ gf:"Butter Is Better מציע לחם, בייגל ופנקייקים ללא גלוטן, ונמצא ממש ליד המלון."},
+
+{d:"2026-09-15",dow:"שלישי",loc:"pai",place:"עלייה לפאי",stay:"The Quarter, פאי",status:"הוזמן",cost:68000,
+ hol:[],
+ tl:[
+  {t:"09:00",x:"איסוף מ‑Meliá על ידי <b>אסף מ‑Topper Tours</b>"},
+  {t:"",x:"גלישת אומגה, עשר תחנות"},
+  {t:"",x:"<b>Take Care Elephant</b>, חוות פילים טיפולית ואתית. האכלה, מגע ורחצה משותפת"},
+  {t:"",x:"רפטינג בנהר"},
+  {t:"",x:"כפר שבט ארוכות הצוואר"},
+  {t:"שקיעה",x:"<b>Pai Canyon</b>"},
+  {t:"ערב",x:"זמן חופשי בפאי"}
+ ],
+ note:"המזוודות הגדולות נשארות בשמירת חפצים ב‑Meliá. נוסעים לפאי עם תיק גב ליומיים בלבד.",
+ cnote:"8,500 באט לאדם, סך 68,000 לשמונה. כולל מדריך, רכב, מים, ביטוח, כניסות, לינה ב‑Quarter ל‑2 לילות והסעות."},
+
+{d:"2026-09-16",dow:"רביעי",loc:"pai",place:"מערות ומעיינות",stay:"The Quarter, פאי",status:"הוזמן",cost:0,
+ hol:[],
+ tl:[
+  {t:"",x:"<b>מערת לוד</b> ושייט על רפסודת במבוק בתוך המערה"},
+  {t:"",x:"מעיינות חמים טבעיים בלב הג׳ונגל"},
+  {t:"",x:"נסיעת שטח לכפרים מקומיים"},
+  {t:"ערב",x:"שוק הלילה של פאי"}
+ ],
+ gf:"Cheese Madness בשוק הלילה מציע טוסט גבינה עם לחם ללא גלוטן וטוסטר נפרד. חלופה: Na's Kitchen, עם רוטב סויה ורוטב צדפות ללא גלוטן.",
+ cnote:"כלול במחיר הטיול של Topper Tours."},
+
+{d:"2026-09-17",dow:"חמישי",loc:"pai",place:"סביבות פאי וחזרה",stay:"Meliá Chiang Mai",status:"הוזמן",cost:0,
+ hol:[],
+ tl:[
+  {t:"",x:"גשר הזיכרון ההיסטורי"},
+  {t:"",x:"תצפית <b>Yun Lai</b>"},
+  {t:"",x:"הכפר הסיני Santichon"},
+  {t:"",x:"פסל הבודהה הגדול"},
+  {t:"",x:"רחצה במפלים הלבנים, Mo Paeng"},
+  {t:"19:00",x:"נסיעה חזרה לצ׳יאנג מאי והתמקמות מחדש ב‑Meliá"}
+ ],
+ note:"אוספים את המזוודות מהשמירה ומקבלים מחדש את ארבעת החדרים.",
+ flag:"יציאה ב‑19:00 מפאי מגיעה לצ׳יאנג מאי סביב 22:00, בכביש עם 762 סיבובים ואחרי יום מלא."},
+
+{d:"2026-09-18",dow:"שישי",loc:"cnx",place:"מזחלת וסדנת בישול",stay:"Meliá Chiang Mai",status:"הוזמן",cost:4000,
+ hol:["ערב שבת"],
+ tl:[
+  {t:"בוקר",x:"<b>Pong Yang Jungle Coaster</b>, מזחלת הרים בשליטה עצמית"},
+  {t:"צהריים",x:"<b>סדנת בישול תאילנדית פרטית</b> ב‑Small House Thai Cooking School, מותאמת ללא גלוטן"},
+  {t:"ערב",x:"עיסוי תאילנדי בספא ליד המלון וקניות אחרונות בצפון"}
+ ],
+ gf:"הסדנה מכינה פאד תאי, קארי ומנגו סטיקי רייס בטוחים ב‑100 אחוז לצליאק."},
+
+{d:"2026-09-19",dow:"שבת",loc:"usm",place:"מעבר לקוסמוי",stay:"וילה אנאר, חוף Bang Por",status:"הוזמן",cost:0,
+ hol:["שבת"],
+ tl:[
+  {t:"10:10",x:"<b>PG 216</b> מצ׳יאנג מאי לבנגקוק, נחיתה ב‑11:35"},
+  {t:"11:35",x:"קונקשן בבנגקוק, שעתיים וחמש דקות"},
+  {t:"13:40",x:"<b>PG 145</b> לקוסמוי, נחיתה ב‑14:45"},
+  {t:"",x:"הסעת VIP פרטית, כלולה באירוח, ישירות לווילה"},
+  {t:"",x:"התמקמות בחמשת חדרי השינה, בריכת אינפיניטי, קיאקים ושקיעה מהחוף הפרטי"}
+ ],
+ note:"הווילה כוללת ארוחות בוקר יומיות, שף תאילנדי פרטי, מנהל וילה וניקיון יומי.",
+ flag:"בגיליון רשום ״קבלת פנים וצ׳ק‑אאוט״ בווילה. הכוונה ככל הנראה לצ׳ק‑אין."},
+
+{d:"2026-09-20",dow:"ראשון",loc:"usm",place:"מקדשים וערב איטלקי",stay:"וילה אנאר",status:"הוזמן",cost:500,
+ hol:["ערב יום כיפור"],
+ tl:[
+  {t:"08:30",x:"ארוחת בוקר קונטיננטלית מבושלת בווילה, עד 10:00"},
+  {t:"",x:"בוקר של שחייה וקיאקים בחוף הפרטי"},
+  {t:"15:30",x:"<b>Wat Phra Yai</b>, הבודהה הגדול. שישים מדרגות לתצפית"},
+  {t:"",x:"<b>Wat Plai Laem</b> הצבעוני הסמוך"},
+  {t:"18:30",x:"ארוחת ערב ב<b>Prego Samui</b> בחוף צ׳אוונג"}
+ ],
+ gf:"ל‑Prego תפריט נפרד ומלא ללא גלוטן: לחם פתיחה חם, פסטות, פיצות וטירמיסו. מומלץ להזמין מקום מראש."},
+
+{d:"2026-09-21",dow:"שני",loc:"usm",place:"ג׳יפים בג׳ונגל",stay:"וילה אנאר",status:"הוזמן",cost:6000,
+ hol:["יום כיפור"],
+ tl:[
+  {t:"09:00",x:"<b>טיול ג׳יפים 4X4 פרטי</b> בג׳ונגל ההררי, עד 16:00"},
+  {t:"",x:"מפלי Na Muang, עם אפשרות רחצה"},
+  {t:"",x:"גן הבודהה הנסתר בהרים"},
+  {t:"",x:"הפקת גומי מקומית ותצפיות 360 מעלות"},
+  {t:"16:30",x:"חזרה לווילה, מנוחה ובריכה"},
+  {t:"19:30",x:"ארוחת ערב שיבשל <b>השף התאילנדי הפרטי</b> של הווילה"}
+ ],
+ gf:"לעדכן את השף מראש. הוא יבשל לתמר עם רוטב הסויה ללא גלוטן שהבאתם מהארץ.",
+ cnote:"השף כלול במחיר הלינה. עלות המצרכים בנפרד."},
+
+{d:"2026-09-22",dow:"שלישי",loc:"usm",place:"אנג תונג",stay:"וילה אנאר",status:"הוזמן",cost:7500,
+ hol:[],
+ tl:[
+  {t:"08:00",x:"<b>שמורת אנג תונג</b>, 42 איים. יום שלם עד 16:30"},
+  {t:"",x:"חתירה בקיאקים בין צוקי גיר"},
+  {t:"",x:"שנורקלינג במים צלולים"},
+  {t:"",x:"עלייה לתצפית מעל הלגונה הנסתרת Talay Nai"},
+  {t:"",x:"חופים לבנים ומפגש עם קופי בר"},
+  {t:"",x:"חזרה לווילה, ארוחת ערב קלה"}
+ ],
+ gf:"ארוחת הצהריים כלולה בשייט. חשוב לוודא מראש מענה ללא גלוטן לתמר."},
+
+{d:"2026-09-23",dow:"רביעי",loc:"usm",place:"יום קליל באי",stay:"וילה אנאר",status:"הוזמן",cost:1200,
+ hol:[],
+ tl:[
+  {t:"08:30",x:"בוקר רגוע לצד בריכת האינפיניטי, עד 13:30"},
+  {t:"14:00",x:"<b>Capybara World Samui</b>, ליטוף והאכלת קפיבארות"},
+  {t:"16:00",x:"<b>Football Golf</b>, מסלול מכשולים לקבוצה גדולה"},
+  {t:"19:30",x:"משלוח מ<b>Hot Point</b> הישראלית ישירות לווילה"}
+ ],
+ gf:"Hot Point מטגנת שניצלים בציפוי ללא גלוטן בטיגון נפרד. יש גם זיווה ללא גלוטן, בשרים וחומוס."},
+
+{d:"2026-09-24",dow:"חמישי",loc:"usm",place:"אי החזירים",stay:"וילה אנאר",status:"הוזמן",cost:3500,
+ hol:[],
+ tl:[
+  {t:"09:00",x:"שייט בלונגטייל אל <b>Koh Madsum</b>, אי החזירים. עד 14:30"},
+  {t:"",x:"האכלה, ליטוף ושחייה במי הטורקיז"},
+  {t:"",x:"חזרה לווילה, בריכה וארוחת ערב רגועה"}
+ ]},
+
+{d:"2026-09-25",dow:"שישי",loc:"usm",place:"בופוט ומופע האש",stay:"וילה אנאר",status:"הוזמן",cost:2000,
+ hol:["ערב שבת","ערב סוכות"],
+ tl:[
+  {t:"",x:"בוקר אחרון ורגוע בווילה"},
+  {t:"17:30",x:"<b>Fisherman's Village</b> בבופוט, שוק הלילה של יום שישי"},
+  {t:"18:30",x:"ארוחת ערב ב<b>Kawin's Kitchen</b>"},
+  {t:"20:00",x:"תפיסת שולחן ב<b>Coco Tam's</b> על החוף"},
+  {t:"21:00",x:"מופע האש, הגדול בתאילנד"}
+ ],
+ gf:"לבעלת Kawin's Kitchen בת צליאקית. המטבח סטרילי ובטוח לחלוטין.",
+ note:"להגיע ל‑Coco Tam's עד 20:00 לכל המאוחר כדי לתפוס מקום לפני המופע."},
+
+{d:"2026-09-26",dow:"שבת",loc:"bkk",place:"חזרה לבנגקוק",stay:"Chatrium Grand Bangkok",status:"בתכנון",cost:0,
+ hol:["שבת","א׳ סוכות"],
+ tl:[
+  {t:"15:25",x:"<b>PG 146</b> מקוסמוי לבנגקוק, נחיתה ב‑16:40"},
+  {t:"",x:"העברה למלון ברובע סיאם"},
+  {t:"16:30",x:"<b>Corgi in the Garden</b> בצ׳רואן נאקון, 33 קורגים. סבב אחרון עד 18:00"},
+  {t:"18:15",x:"קניון <b>ICONSIAM</b> והשוק הצף המקורה SookSiam"},
+  {t:"20:00",x:"<b>Asiatique</b> על הנהר, גלגל ענק ודוכנים"}
+ ],
+ flag:"הנחיתה ב‑16:40 והסבב האחרון בבית הקפה מסתיים ב‑18:00. שווה לבדוק סבב מוקדם יותר או לוותר."},
+
+{d:"2026-09-27",dow:"ראשון",loc:"bkk",place:"ארמון המלך וסיכום",stay:"Chatrium Grand Bangkok",status:"בתכנון",cost:5000,
+ hol:["ב׳ סוכות"],
+ tl:[
+  {t:"06:00",x:"ריצת בוקר"},
+  {t:"08:30",x:"<b>ארמון המלך</b> ומקדש Wat Phra Kaew, האמרלד בודהה. עד 10:00"},
+  {t:"10:00",x:"שוק הפרחים Pak Khlong Talat"},
+  {t:"11:30",x:"קניות ב<b>MBK Center</b> וביקור ב‑Don Don Donki"},
+  {t:"14:00",x:"פיצול משפחתי ובילוי באזור סיאם, עד 17:00"},
+  {t:"19:30",x:"ארוחת סיכום ב<b>Din Tai Fung</b> ב‑CentralWorld"}
+ ],
+ gf:"צהריים לתמר: Bangkok Bold Kitchen בקומת הקרקע של Central Embassy, עם תפריט ללא גלוטן.",
+ note:"להשתמש ברכבת ה‑BTS או ב‑Grab כדי להימנע מפקקים."},
+
+{d:"2026-09-28",dow:"שני",loc:"air",place:"חזרה הביתה",stay:"לינה בטיסה",status:"הוזמן",cost:0,
+ hol:[],
+ tl:[
+  {t:"",x:"צ׳ק אאוט והגעה מוקדמת לשדה התעופה"},
+  {t:"12:25",x:"<b>AZ 759</b> מבנגקוק לרומא, נחיתה ב‑19:15"},
+  {t:"23:35",x:"<b>AZ 810</b> מרומא לנתב״ג"},
+  {t:"03:55",x:"נחיתה בנתב״ג ב‑29 בספטמבר, לפנות בוקר"}
+ ],
+ note:"להגיע כשלוש שעות וחצי לפני ההמראה. התורים בסוברנבהומי ארוכים."}
+];
+
+var FLIGHTS = [
+ {c:"AZ 809",car:"ITA Airways",a:"05:15",ap:"נתב״ג T3",b:"08:00",bp:"רומא FCO T3",m:"10.09 · 3 שעות ו‑45 דקות"},
+ {conx:1,t:"קונקשן ברומא",m:"המתנה של 7 שעות ו‑15 דקות"},
+ {c:"AZ 758",car:"ITA Airways",a:"15:15",ap:"רומא FCO T1",b:"07:25",bp:"בנגקוק BKK",m:"10–11.09 · 11 שעות ו‑10 דקות, טיסת לילה"},
+ {c:"TG 110",car:"Thai Airways",a:"13:30",ap:"בנגקוק BKK",b:"14:50",bp:"צ׳יאנג מאי CNX",m:"13.09 · שעה ו‑20 דקות"},
+ {c:"PG 216",car:"Bangkok Airways",a:"10:10",ap:"צ׳יאנג מאי CNX",b:"11:35",bp:"בנגקוק BKK",m:"19.09 · שעה ו‑25 דקות"},
+ {conx:1,t:"קונקשן בבנגקוק",m:"המתנה של שעתיים ו‑5 דקות"},
+ {c:"PG 145",car:"Bangkok Airways",a:"13:40",ap:"בנגקוק BKK",b:"14:45",bp:"קוסמוי USM",m:"19.09 · שעה ו‑5 דקות"},
+ {c:"PG 146",car:"Bangkok Airways",a:"15:25",ap:"קוסמוי USM",b:"16:40",bp:"בנגקוק BKK",m:"26.09 · שעה ו‑15 דקות"},
+ {c:"AZ 759",car:"ITA Airways",a:"12:25",ap:"בנגקוק BKK",b:"19:15",bp:"רומא FCO T3",m:"28.09 · 11 שעות ו‑50 דקות"},
+ {conx:1,t:"קונקשן ברומא",m:"המתנה של 4 שעות ו‑20 דקות"},
+ {c:"AZ 810",car:"ITA Airways",a:"23:35",ap:"רומא FCO T1",b:"03:55",bp:"נתב״ג T3",m:"28–29.09 · 3 שעות ו‑20 דקות"}
+];
+
+var STAYS = [
+ {n:"Chatrium Grand Bangkok",loc:"bkk",when:"11–13 בספטמבר · 2 לילות",st:"הוזמן",
+  d:"מלון חמישה כוכבים בלב רובע הקניות סיאם. בריכה, ספא THANN ומרחק הליכה מ‑Siam Paragon ומ‑CentralWorld.",
+  addr:"728 Phetchaburi Road",tel:"+6621267999",mail:"info.cgb@chatrium.com"},
+ {n:"Meliá Chiang Mai",loc:"cnx",when:"13–15 בספטמבר · 2 לילות",st:"הוזמן",
+  d:"ארבעה חדרים לחמישה מבוגרים ושלושה ילדים. ברובע צ׳אנג קלאן ליד ה‑Night Bazaar. מועדון ילדים ובר גג.",
+  addr:"Charoen Prathet Road, Changklan 46"},
+ {n:"The Quarter, פאי",loc:"pai",when:"15–17 בספטמבר · 2 לילות",st:"כלול בטיול",
+  d:"מלון משפחתי בלב פאי עם בריכה. משמש בסיס לטיול המודרך של Topper Tours.",
+  addr:"פאי, מחוז מאי הונג סון"},
+ {n:"Meliá Chiang Mai",loc:"cnx",when:"17–19 בספטמבר · 2 לילות",st:"הוזמן",
+  d:"חזרה לאותם ארבעה חדרים. המזוודות הגדולות ממתינות בשמירת חפצים.",
+  addr:"Charoen Prathet Road, Changklan 46"},
+ {n:"וילה אנאר",loc:"usm",when:"19–26 בספטמבר · 7 לילות",st:"הוזמן",
+  d:"וילת חוף פרטית עם חמישה חדרי שינה en‑suite לשמונה נפשות. בריכת אינפיניטי, חוף פרטי, קיאקים, שף תאילנדי צמוד, מנהל וילה, ניקיון יומי והסעות משדה התעופה.",
+  addr:"חוף Bang Por, קוסמוי"},
+ {n:"Chatrium Grand Bangkok",loc:"bkk",when:"26–28 בספטמבר · 2 לילות",st:"טרם הוזמן",
+  d:"שני הלילות האחרונים. ברשימת המשימות זה עדיין הפריט הפתוח המרכזי, באחריות אבא ואמא.",
+  addr:"728 Phetchaburi Road",tel:"+6621267999",mail:"info.cgb@chatrium.com"}
+];
+
+var PAX = [
+ {id:"P1",n:"אליזה דמבינסקי",en:"DEMBINSKI ELIZAH MR",tk:"217 2350120171",tg:"41H",tgm:"פירות",p216:"24D",p145:"08D",p146:"04D",p146m:"רגיל"},
+ {id:"P2",n:"אור דמבינסקי",en:"DEMBINSKI OR MISS",tk:"217 2350120172",tg:"41J",tgm:"ילדים",p216:"24E",p145:"08E",p146:"04E",p146m:"ילדים"},
+ {id:"P3",n:"תמר דמבינסקי",en:"DEMBINSKI TAMAR MISS",tk:"217 2350120174",tg:"41B",tgm:"ללא גלוטן",p216:"25D",p145:"08A",p146:"04B",p146m:"רגיל",hi:1},
+ {id:"P4",n:"חוה דמבינסקי",en:"DEMBINSKI HAVA MRS",tk:"217 2350120175",tg:"42H",tgm:"פירות",p216:"24C",p145:"08C",p146:"03D",p146m:"פירות"},
+ {id:"P5",n:"צבי יוסף",en:"YOSSEF ZVI MR",tk:"217 2350120177",tg:"42B",tgm:"כשר",p216:"",p145:"",p146:"03B",p146m:"פירות"},
+ {id:"P6",n:"אריאל דמבינסקי",en:"DEMBINSKI ARIEL MR",tk:"",tg:"",tgm:"",p216:"24F",p145:"08F",p146:"04F",p146m:"ילדים"},
+ {id:"P7",n:"רחלי דמבינסקי",en:"DEMBINSKI RACHELI MRS",tk:"",tg:"",tgm:"",p216:"25E",p145:"08B",p146:"04C",p146m:"רגיל"},
+ {id:"P8",n:"רינה יוסף",en:"YOSSEF RINA MRS",tk:"",tg:"",tgm:"",p216:"",p145:"",p146:"03C",p146m:"רגיל"}
+];
+
+var GFPACK = [
+ {n:"שקיות טוסטר",d:"שקיות חסינות חום לקליית לחם בטוסטר של המלון בלי זיהום מלחם רגיל. לארוז בתיק היד."},
+ {n:"רוטב סויה Tamari",d:"רוב המסעדות בתאילנד משתמשות בסויה עם גלוטן. לוקחים את הבקבוק לכל מסעדה ומבקשים שיבשלו איתו. במזוודה הגדולה."},
+ {n:"Gluten Free Card בתאילנדית",d:"כרטיס מודפס שמסביר מהו צליאק, מזהיר מרוטב סויה וצדפות, ומבקש לנקות את הווק לפני הבישול."},
+ {n:"גיבוי לטיסה",d:"כריכים מלחם מוכר, חטיפים שלא נמעכים ונודלס אורז. במקדונלד׳ס בנתב״ג אין מענה בטוח. בשדה בבנגקוק מנגו סטיקי רייס בטוח."}
+];
+
+var GFREST = [
+ {loc:"bkk",n:"Hard Rock Cafe",area:"סיאם סקוור",price:"$$",d:"המבורגר בלחמנייה ללא גלוטן, וצ׳יפס שמטוגן בצ׳יפסר נפרד לחלוטין. מרחק הליכה קצר מהמלון."},
+ {loc:"bkk",n:"Bangkok Bold Kitchen",area:"Central Embassy",price:"$$",d:"תאילנדי מצוין בקומת הקרקע של הקניון. תפריט ללא גלוטן עם אורז מוקפץ, מוקפצים וקארי."},
+ {loc:"bkk",n:"Nopparat Cuisine & Gallery",area:"ליד הקוואסן",price:"$–$$",d:"תאילנדי מסורתי. הצוות מבין בצליאק, יש רטבים ייעודיים ומסבירים בדיוק מה מותר."},
+ {loc:"bkk",n:"Pizza Massilia / Peppina",area:"סוקומוויט וסניפים",price:"$$",d:"פיצה נפוליטנית עם בסיס ללא גלוטן ומודעות גבוהה לזיהום צולב."},
+ {loc:"bkk",n:"25 Degrees",area:"סילום",price:"$$",d:"המבורגרים עם לחמנייה ללא גלוטן. חלופה לערב צ׳יינה טאון."},
+ {loc:"cnx",n:"Kat's Kitchen",area:"העיר העתיקה",price:"$",d:"מודעות שיא לצליאק. מבינים מיד את כרטיס ההסבר ומתאימים כמעט כל מנה תאילנדית. מנות נדיבות וזולות."},
+ {loc:"cnx",n:"Butter Is Better",area:"צ׳אנג קלאן",price:"$–$$",d:"דיינר אמריקאי ממש ליד Meliá. לחם, בייגל, פנקייקים, פסטה וארוחות בוקר, הכל בגרסאות ללא גלוטן."},
+ {loc:"cnx",n:"Small House Thai Cooking School",area:"סדנת בישול",price:"כלול",d:"סדנה פרטית מותאמת. פאד תאי, קארי ומנגו סטיקי רייס בטוחים לחלוטין."},
+ {loc:"pai",n:"Na's Kitchen",area:"פאי",price:"$",d:"רוטב סויה ורוטב צדפות ללא גלוטן, נדיר מאוד בתאילנד. אוכל ביתי מסורתי ובטוח."},
+ {loc:"pai",n:"Cheese Madness",area:"שוק הלילה",price:"$",d:"טוסט גבינה בהרכבה עצמית, עם לחם ללא גלוטן וטוסטר לחיצה נפרד לחלוטין."},
+ {loc:"usm",n:"Kawin's Kitchen",area:"בופוט",price:"$–$$",d:"לבעלת המקום בת צליאקית, ולכן המטבח בטוח לחלוטין. מנות תאילנדיות ענקיות וזולות."},
+ {loc:"usm",n:"Prego Samui",area:"צ׳אוונג, מלון Amari",price:"$$$",d:"תפריט נפרד ומלא ללא גלוטן: לחם פתיחה חם, פסטות, פיצות וטירמיסו."},
+ {loc:"usm",n:"Hot Point",area:"צ׳אוונג, משלוחים",price:"$–$$",d:"ישראלית בשרית שמשלחת ישירות לווילה. שניצלים בציפוי ללא גלוטן בטיגון נפרד, זיווה, בשרים וחומוס."}
+];
+
+var TASKS = [
+ {id:"t1",n:"בדיקת תוקף דרכונים",s:"חצי שנה לפחות מיום הטיסה · כולם",done:0},
+ {id:"t2",n:"הזמנת Meliá Chiang Mai",s:"בוצע · כולם",done:1},
+ {id:"t3",n:"תיאום סופי מול Topper Tours",s:"בוצע · אבא",done:1},
+ {id:"t4",n:"הזמנת וילה אנאר, 19–26.09",s:"בוצע · כולם",done:1},
+ {id:"t5",n:"הזמנת מלון בבנגקוק ל‑26–28.09",s:"טרם התחיל · אבא ואמא",done:0},
+ {id:"t6",n:"הזמנת טיסות פנים לקוסמוי, 19.09",s:"טרם התחיל ברשימה, אך מספרי טיסה ומושבים כבר קיימים · אבא",done:0},
+ {id:"t7",n:"הזמנת טיסת פנים מקוסמוי, 26.09",s:"טרם התחיל ברשימה, אך PG 146 כבר משובץ · אבא",done:0},
+ {id:"t8",n:"ביטוח נסיעות מקיף",s:"חייב לכסות אומגה, רפטינג וספורט אתגרי · אמא",done:0},
+ {id:"t9",n:"כדורים נגד בחילות נסיעה",s:"לכביש פאי עם 762 הסיבובים · אמא",done:0},
+ {id:"t10",n:"התקנת Grab ו‑Bolt והזנת כרטיס אשראי",s:"כולם",done:0},
+ {id:"t11",n:"רכישת שקיות טוסטר",s:"בתהליך · אמא",done:0},
+ {id:"t12",n:"לחמים באריזת ואקום",s:"בתהליך · אמא",done:0},
+ {id:"t13",n:"רוטב סויה Tamari",s:"בתהליך · אמא",done:0},
+ {id:"t14",n:"הדפסת Gluten Free Card בתאילנדית",s:"בתהליך · אמא",done:0},
+ {id:"t15",n:"אימות ארוחה ללא גלוטן ב‑PG 146",s:"תמר רשומה כ״רגיל״ בטיסה הזו",done:0},
+ {id:"t16",n:"השלמת מושבים לצבי ורינה ב‑19.09",s:"PG 216 ו‑PG 145 מסומנים במקף",done:0}
+];
+
+var PACK = [
+ {id:"k1",n:"דרכונים, כרטיסי טיסה ואישורי מלונות",s:"מסמכים"},
+ {id:"k2",n:"רישיונות נהיגה בינלאומיים",s:"מסמכים"},
+ {id:"k3",n:"צילום של כל המסמכים בנייד ובמייל",s:"מסמכים"},
+ {id:"k4",n:"Gluten Free Card מודפס בתאילנדית",s:"מסמכים"},
+ {id:"k5",n:"בגדי ים, חולצות שמש ובגדי קיץ",s:"ביגוד"},
+ {id:"k6",n:"עליונית או סוודר קל",s:"ביגוד · בצפון ובפאי קריר בערב ובבוקר"},
+ {id:"k7",n:"נעלי הליכה סגורות וסנדלי מים",s:"ביגוד"},
+ {id:"k8",n:"מטען נייד חזק",s:"אלקטרוניקה"},
+ {id:"k9",n:"מתאם לחשמל",s:"אלקטרוניקה"},
+ {id:"k10",n:"קרם הגנה ותכשיר נגד יתושים",s:"בריאות"},
+ {id:"k11",n:"ערכת עזרה ראשונה משפחתית",s:"בריאות"},
+ {id:"k12",n:"שקיות טוסטר",s:"מזון ורטבים"},
+ {id:"k13",n:"רוטב סויה Tamari",s:"מזון ורטבים · במזוודה הגדולה"},
+ {id:"k14",n:"לחמים ולחמניות באריזת ואקום",s:"מזון ורטבים"},
+ {id:"k15",n:"מנות חמות ונודלס אורז",s:"מזון ורטבים · גיבוי לטיסה"},
+ {id:"k16",n:"חטיפים ללא גלוטן לילדים",s:"מזון ורטבים"}
+];
+
+var BUDGET = [
+ {n:"טיול Topper Tours לפאי",s:"15–17.09 · 8,500 באט לאדם",v:68000},
+ {n:"שייט אנג תונג",s:"22.09 · כולל ארוחת צהריים",v:7500},
+ {n:"ג׳יפים 4X4 בקוסמוי",s:"21.09",v:6000},
+ {n:"בנגקוק, יום אחרון",s:"27.09 · ארמון, קניות וארוחת סיכום",v:5000},
+ {n:"סדנת בישול וספא",s:"18.09",v:4000},
+ {n:"אי החזירים",s:"24.09",v:3500},
+ {n:"ערב בבופוט",s:"25.09",v:2000},
+ {n:"צ׳יאנג מאי, פילים ודוי סותפ",s:"14.09",v:2000},
+ {n:"קפיבארות ופוטבול גולף",s:"23.09",v:1200},
+ {n:"מקדשים וערב ב‑Prego",s:"20.09",v:500}
+];
+
+/* ---------------- render ---------------- */
+var $ = function(s){ return document.querySelector(s); };
+function el(t,c,h){ var e=document.createElement(t); if(c)e.className=c; if(h!=null)e.innerHTML=h; return e; }
+function esc(s){ return String(s).replace(/[<>&]/g,function(m){return {"<":"&lt;",">":"&gt;","&":"&amp;"}[m];}); }
+function fmtBaht(n){ return n.toLocaleString("en-US"); }
+var HEDOW=["ראשון","שני","שלישי","רביעי","חמישי","שישי","שבת"];
+
+/* today */
+var TODAY_ISO=(function(){var d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");})();
+
+(function renderToday(){
+  var box=$("#today"), idx=-1;
+  for(var i=0;i<DAYS.length;i++){ if(DAYS[i].d===TODAY_ISO){ idx=i; break; } }
+  var dd=new Date(TODAY_ISO+"T12:00:00");
+  var badge='<div class="badge"><b class="num">'+dd.getDate()+'</b><span>'+["ינו","פבר","מרץ","אפר","מאי","יונ","יול","אוג","ספט","אוק","נוב","דצמ"][dd.getMonth()]+'</span></div>';
+  var txt;
+  if(idx>=0){
+    var day=DAYS[idx];
+    txt='<strong>יום '+(idx+1)+' מתוך 19 · '+esc(day.place)+'</strong><span>'+esc(day.stay)+'</span>';
+  } else {
+    var start=new Date("2026-09-10T12:00:00"), end=new Date("2026-09-29T12:00:00");
+    if(dd<start){
+      var days=Math.round((start-dd)/86400000);
+      txt='<strong>'+days+' ימים להמראה</strong><span>ההמראה מנתב״ג ב‑10 בספטמבר, 05:15</span>';
+    } else if(dd>end){
+      txt='<strong>הטיול הסתיים</strong><span>19 ימים, ארבעה יעדים</span>';
+    } else {
+      txt='<strong>בדרך הביתה</strong><span>נחיתה בנתב״ג ב‑29 בספטמבר, 03:55</span>';
+    }
+  }
+  box.innerHTML=badge+'<div class="txt">'+txt+'</div>';
+})();
+
+/* filters + timeline */
+var activeFilter="all";
+(function renderFilters(){
+  var f=$("#filters");
+  var opts=[["all","כל הטיול"],["bkk","בנגקוק"],["cnx","צ׳יאנג מאי"],["pai","פאי"],["usm","קוסמוי"],["air","טיסות"]];
+  opts.forEach(function(o){
+    var b=el("button","chipf",o[1]);
+    b.type="button"; b.setAttribute("aria-pressed",o[0]==="all"?"true":"false");
+    b.addEventListener("click",function(){
+      activeFilter=o[0];
+      Array.prototype.forEach.call(f.children,function(c){c.setAttribute("aria-pressed","false");});
+      b.setAttribute("aria-pressed","true");
+      renderTimeline();
+    });
+    f.appendChild(b);
+  });
+})();
+
+function renderTimeline(){
+  var host=$("#timeline"); host.innerHTML="";
+  var list=DAYS.filter(function(d){ return activeFilter==="all"||d.loc===activeFilter; });
+  var i=0;
+  while(i<list.length){
+    var loc=list[i].loc, group=[];
+    while(i<list.length && list[i].loc===loc){ group.push(list[i]); i++; }
+    var leg=el("div","leg");
+    leg.style.setProperty("--c",LOC[loc].c);
+    var head=el("div","leghead");
+    head.innerHTML='<span class="dot"></span><h2>'+LOC[loc].name+'</h2><span class="rule"></span>'+
+      '<span class="cnt num">'+group.length+(group.length===1?" יום":" ימים")+'</span>';
+    leg.appendChild(head);
+    group.forEach(function(day){ leg.appendChild(dayNode(day,loc)); });
+    host.appendChild(leg);
+  }
+}
+
+function dayNode(day,loc){
+  var n=el("div","day"+(day.d===TODAY_ISO?" is-today":""));
+  n.style.setProperty("--c",LOC[loc].c);
+  var dt=new Date(day.d+"T12:00:00");
+  var idx=DAYS.indexOf(day)+1;
+
+  var card=el("div","daycard");
+
+  var head=el("div","dhead");
+  head.innerHTML=
+   '<div class="dd"><b class="num">'+dt.getDate()+'.'+String(dt.getMonth()+1).padStart(2,"0")+'</b><span>'+day.dow+'</span></div>'+
+   '<div class="dt"><h3>'+esc(day.place)+'</h3><div class="stay">'+esc(day.stay)+'</div></div>'+
+   '<div class="dnum">יום '+idx+'</div>';
+  card.appendChild(head);
+
+  var chips=el("div","chips");
+  if(day.d===TODAY_ISO) chips.appendChild(el("span","chip gold","היום"));
+  chips.appendChild(el("span","chip "+(day.status==="הוזמן"?"ok":"plan"),day.status));
+  (day.hol||[]).forEach(function(h){ chips.appendChild(el("span","chip hol",h)); });
+  if(day.cost) chips.appendChild(el("span","chip cost",fmtBaht(day.cost)+" ฿"));
+  card.appendChild(chips);
+
+  var ul=el("ul","tl");
+  day.tl.forEach(function(it){
+    var li=el("li");
+    li.innerHTML='<time class="'+(it.t?"":"blank")+'">'+(it.t||"·")+'</time><p>'+it.x+'</p>';
+    ul.appendChild(li);
+  });
+  card.appendChild(ul);
+
+  if(day.gf) card.appendChild(el("div","dnote gf",'<span class="k">ללא גלוטן</span><span>'+day.gf+'</span>'));
+  if(day.note) card.appendChild(el("div","dnote",'<span class="k">לשים לב</span><span>'+day.note+'</span>'));
+  if(day.cnote) card.appendChild(el("div","dnote",'<span class="k">עלות</span><span>'+day.cnote+'</span>'));
+  if(day.flag) card.appendChild(el("div","dnote flag",'<span class="k">לבדוק</span><span>'+day.flag+'</span>'));
+
+  n.appendChild(card);
+  return n;
+}
+renderTimeline();
+
+/* flights */
+(function(){
+  var host=$("#flights");
+  FLIGHTS.forEach(function(f){
+    var r=el("div","fl"+(f.conx?" conx":""));
+    if(f.conx){
+      r.innerHTML='<div class="code">'+f.t+'</div><div class="seg">'+f.m+'</div>';
+    } else {
+      r.innerHTML='<div><div class="code">'+f.c+'</div><span class="car">'+f.car+'</span></div>'+
+        '<div><div class="seg">'+
+          '<div class="pt"><b class="num">'+f.a+'</b><span>'+f.ap+'</span></div>'+
+          '<div class="mid"><em>'+f.m+'</em></div>'+
+          '<div class="pt"><b class="num">'+f.b+'</b><span>'+f.bp+'</span></div>'+
+        '</div></div>';
+    }
+    host.appendChild(r);
+  });
+})();
+
+/* stays */
+(function(){
+  var host=$("#stays");
+  STAYS.forEach(function(s){
+    var c=el("div","gcard");
+    c.style.borderInlineStartWidth="3px";
+    c.style.borderInlineStartColor=LOC[s.loc].c;
+    var links="";
+    if(s.tel) links+=' · <a href="tel:'+s.tel+'">'+s.tel+'</a>';
+    if(s.mail) links+=' · <a href="mailto:'+s.mail+'">מייל</a>';
+    c.innerHTML='<h3>'+esc(s.n)+'</h3>'+
+      '<div class="meta"><span class="price">'+s.when+'</span><span>·</span><span>'+s.st+'</span></div>'+
+      '<p>'+esc(s.d)+'</p>'+
+      '<div class="meta"><a href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(s.n+" "+s.addr)+'" target="_blank" rel="noopener">'+esc(s.addr)+'</a>'+links+'</div>';
+    host.appendChild(c);
+  });
+})();
+
+/* pax table */
+(function(){
+  var t=$("#pax");
+  t.innerHTML='<thead><tr><th>נוסע</th><th>TG 110<br>13.09</th><th>ארוחה</th>'+
+    '<th>PG 216<br>19.09</th><th>PG 145<br>19.09</th><th>PG 146<br>26.09</th><th>ארוחה</th></tr></thead>';
+  var tb=el("tbody");
+  PAX.forEach(function(p){
+    var tr=el("tr",p.hi?"hi":"");
+    function s(v){ return v? '<span class="num">'+v+'</span>' : '<span class="dash">—</span>'; }
+    function m(v){ return v? esc(v) : '<span class="dash">—</span>'; }
+    tr.innerHTML='<td><span class="nm">'+esc(p.n)+'</span><br><span class="ty">'+p.en+'</span></td>'+
+      '<td class="s">'+s(p.tg)+'</td><td>'+m(p.tgm)+'</td>'+
+      '<td class="s">'+s(p.p216)+'</td><td class="s">'+s(p.p145)+'</td>'+
+      '<td class="s">'+s(p.p146)+'</td><td>'+m(p.p146m)+'</td>';
+    tb.appendChild(tr);
+  });
+  t.appendChild(tb);
+})();
+
+/* tickets */
+(function(){
+  var host=$("#tix");
+  PAX.forEach(function(p){
+    var r=el("div","row");
+    r.innerHTML='<div style="flex:1"><span class="nm" style="font-weight:600">'+esc(p.n)+'</span></div>'+
+      '<div class="num" style="color:'+(p.tk?"var(--ink2)":"var(--muted)")+';font-size:13px">'+(p.tk||"לא מופיע בהזמנה")+'</div>';
+    host.appendChild(r);
+  });
+})();
+
+/* gf */
+(function(){
+  var host=$("#gfpack");
+  GFPACK.forEach(function(g){
+    var r=el("div","row");
+    r.innerHTML='<div style="flex:1"><div style="font-weight:600">'+esc(g.n)+'</div>'+
+      '<div style="font-size:13px;color:var(--ink2)">'+esc(g.d)+'</div></div>';
+    host.appendChild(r);
+  });
+  var rest=$("#gfrest");
+  ["bkk","cnx","pai","usm"].forEach(function(k){
+    var items=GFREST.filter(function(g){return g.loc===k;});
+    if(!items.length) return;
+    var leg=el("div","leg"); leg.style.setProperty("--c",LOC[k].c);
+    leg.innerHTML='<div class="leghead"><span class="dot"></span><h2>'+LOC[k].name+'</h2><span class="rule"></span>'+
+      '<span class="cnt num">'+items.length+'</span></div>';
+    var grid=el("div","cards");
+    items.forEach(function(g){
+      var c=el("div","gcard");
+      c.innerHTML='<h3>'+esc(g.n)+'</h3><div class="meta"><span class="price">'+g.price+'</span><span>·</span><span>'+esc(g.area)+'</span></div><p>'+esc(g.d)+'</p>';
+      grid.appendChild(c);
+    });
+    leg.appendChild(grid);
+    rest.appendChild(leg);
+  });
+})();
+
+/* budget */
+(function(){
+  var host=$("#budget"), tot=0;
+  BUDGET.forEach(function(b){
+    tot+=b.v;
+    var r=el("div","bud");
+    r.innerHTML='<div><div style="font-weight:600">'+esc(b.n)+'</div><div style="font-size:12px;color:var(--muted)">'+esc(b.s)+'</div></div>'+
+      '<div class="amt">'+fmtBaht(b.v)+' ฿</div>';
+    host.appendChild(r);
+  });
+  var r=el("div","bud tot");
+  r.innerHTML='<div>סך הכל</div><div class="amt">'+fmtBaht(tot)+' ฿</div>';
+  host.appendChild(r);
+})();
+
+/* ---------------- checklists ---------------- */
+var LSKEY="dembinski-thailand-checks-v1";
+var checks={};
+try{ checks=JSON.parse(localStorage.getItem(LSKEY)||"{}")||{}; }catch(e){ checks={}; }
+TASKS.forEach(function(t){ if(!(t.id in checks) && t.done) checks[t.id]=true; });
+
+var dbRef=null, applyingRemote=false;
+
+function saveLocal(){ try{ localStorage.setItem(LSKEY,JSON.stringify(checks)); }catch(e){} }
+
+function buildList(hostSel,items,group){
+  var host=$(hostSel); host.innerHTML="";
+  var lastCat=null;
+  items.forEach(function(it){
+    var lab=el("label","ck");
+    var cat=group?it.s.split(" · ")[0]:null;
+    var sub=it.s;
+    lab.innerHTML='<input type="checkbox" data-id="'+it.id+'"'+(checks[it.id]?" checked":"")+'>'+
+      '<span class="lbl">'+esc(it.n)+'<small>'+esc(sub)+'</small></span>';
+    host.appendChild(lab);
+    lastCat=cat;
+  });
+  host.addEventListener("change",function(ev){
+    var cb=ev.target; if(!cb.dataset||!cb.dataset.id) return;
+    checks[cb.dataset.id]=cb.checked;
+    saveLocal(); updateProgress();
+    if(!applyingRemote) pushRemote(cb.dataset.id,cb.checked);
+  });
+}
+
+function updateProgress(){
+  [["#prog-task","#bar-task",TASKS],["#prog-pack","#bar-pack",PACK]].forEach(function(cfg){
+    var done=cfg[2].filter(function(i){return !!checks[i.id];}).length;
+    $(cfg[0]).textContent=done+" / "+cfg[2].length;
+    $(cfg[1]).style.width=(done/cfg[2].length*100)+"%";
+  });
+}
+
+function syncCheckboxes(){
+  applyingRemote=true;
+  Array.prototype.forEach.call(document.querySelectorAll('input[type="checkbox"][data-id]'),function(cb){
+    cb.checked=!!checks[cb.dataset.id];
+  });
+  applyingRemote=false;
+  updateProgress();
+}
+
+buildList("#tasks",TASKS,false);
+buildList("#pack",PACK,true);
+updateProgress();
+
+function pushRemote(id,val){
+  if(!dbRef) return;
+  var patch={}; patch[id]=val;
+  dbRef.update({items:patch}).catch(function(){
+    dbRef.set({items:checks}).catch(function(){});
+  });
+}
+
+(function initDb(){
+  if(typeof window.claude==="undefined"||!window.claude||typeof window.claude.use!=="function") return;
+  window.claude.use("db").then(function(db){
+    if(!db) return;
+    dbRef=db.doc("trip/checklist");
+    dbRef.onSnapshot(function(snap){
+      if(!snap.exists) return;
+      var data=snap.data()||{}, items=data.items||{};
+      var changed=false;
+      Object.keys(items).forEach(function(k){
+        if(checks[k]!==!!items[k]){ checks[k]=!!items[k]; changed=true; }
+      });
+      if(changed){ saveLocal(); syncCheckboxes(); }
+      $("#sync-a").innerHTML='הסימון <b>מסונכרן</b> לכל מי שפותח את הדף.';
+      $("#sync-b").innerHTML='הסימון <b>מסונכרן</b> לכל מי שפותח את הדף.';
+    },function(){});
+    dbRef.get().then(function(snap){
+      if(!snap.exists) dbRef.set({items:checks}).catch(function(){});
+    }).catch(function(){});
+  }).catch(function(){});
+})();
+
+/* ---------------- tabs ---------------- */
+(function(){
+  var tabs=$("#tabs");
+  tabs.addEventListener("click",function(ev){
+    var b=ev.target.closest(".tab"); if(!b) return;
+    Array.prototype.forEach.call(tabs.children,function(t){
+      var on=t===b;
+      t.setAttribute("aria-selected",on?"true":"false");
+      document.getElementById(t.dataset.p).hidden=!on;
+    });
+    window.scrollTo({top:0,behavior:"instant"});
+  });
+})();
+</script>
+</body>
+</html>
